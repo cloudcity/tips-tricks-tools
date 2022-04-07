@@ -1,0 +1,60 @@
+{
+	"functional component": {
+		"prefix": "fc",
+		"body": [
+			"import React from 'react'",
+			"import PropTypes from 'prop-types'",
+			"",
+			"export function $TM_FILENAME_BASE(props) {",
+			"return (",
+			"$0",
+			")",
+			"}",
+			"",
+			"$TM_FILENAME_BASE.propTypes = {}"
+		],
+		"description": "boilerplate for a React functional component"
+	},
+	"useEffect": {
+		"prefix": "useEffect",
+		"body": [
+			"useEffect(() => {",
+			"$0",
+			"}, [])"
+		],
+		"description": "useEffect block"
+	},
+	"useState": {
+		"prefix": "usestate",
+		"body": [
+			"const [${1:stateName}, set${1/(.)/${1:/upcase}/}] = useState([$2])"
+		]
+	},
+	"disable exhaustive deps": {
+		"prefix": "eslexh",
+		"body": [
+			"//eslint-disable-line react-hooks/exhaustive-deps"
+		],
+		"description": "ignore eslint warning for hook dependencies"
+	},
+  	"testFile": {
+		"prefix": "test",
+		"body": [
+			"import React from 'react'",
+			"import { ${TM_FILENAME/(.*)\\.test\\..+$/$1/} } from '../${TM_FILENAME/(.*)\\.test\\..+$/$1/}'",
+			"",
+			"describe('${TM_FILENAME/(.*)\\.test\\..+$/$1/}', () => {",
+			"  beforeEach(() => {",
+			"    $2",
+			"  })",
+			"",
+			"  describe('render', () => {",
+			"    it('renders correctly', () => {",
+			"     $3",
+			"    })",
+			"  })",
+			"})"
+		],
+		"description": "boilerplate for a component test"
+	}
+}

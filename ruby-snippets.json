@@ -1,0 +1,117 @@
+{
+  "pry": {
+		"prefix": "db",
+		"body": [
+			"require \"pry\"; binding.pry"
+		],
+		"description": "debugger"
+	},
+  "def method": {
+		"prefix": "def ",
+		"body": [
+			"def $1",
+			"\t$0",
+			"end"
+		],
+		"description": "method definition"
+	},
+	"class": {
+		"prefix": "class ",
+		"body": [
+			"# frozen_string_literal: true",
+			"",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}",
+			"\t$0",
+			"end"
+		],
+		"description": "class boilerplate"
+	},
+	"test assertion": {
+		"prefix": "it ",
+		"body": [
+			"it \"$1\" do",
+			"\t$0",
+			"end"
+		],
+		"description": "spec it assertion"
+	},
+	"test describe": {
+		"prefix": "describe ",
+		"body": [
+			"describe \"$1\" do",
+			"\t$0",
+			"end"
+		],
+		"description": "spec describe block"
+	},
+	"test context": {
+		"prefix": "context ",
+		"body": [
+			"context \"$1\" do",
+			"\t$0",
+			"end"
+		],
+		"description": "spec context block"
+	},
+	"test before block": {
+		"prefix": "before ",
+		"body": [
+			"before do",
+			"\t$0",
+			"end"
+		],
+		"description": "spec before block"
+	},
+	"model spec": {
+		"prefix": "modelspec ",
+		"body": [
+			"# frozen_string_literal: true",
+			"",
+			"require \"rails_helper\"",
+			"",
+			"RSpec.describe ${TM_FILENAME_BASE/^(.*)_spec$/${1:/pascalcase}/}, type: :model do",
+			"  describe \"associations\" do",
+			"    $0",
+			"  end",
+			"",
+			"  describe \"validations\" do",
+			"  end",
+			"",
+			"  describe \"scopes\" do",
+			"  end",
+			"",
+			"  describe \"instance methods\" do",
+			"  end",
+			"end"
+		],
+		"description": "skeleton AR model spec"
+	},
+	"vanilla spec": {
+		"prefix": "spec ",
+		"body": [
+			"# frozen_string_literal: true",
+			"",
+			"require \"rails_helper\"",
+			"",
+			"RSpec.describe ${TM_FILENAME_BASE/^(.*)_spec$/${1:/pascalcase}/} do",
+			"  describe \"$1\" do",
+			"    $0",
+			"  end",
+			"end"
+		],
+		"description": "skeleton spec"
+	},
+	"factory": {
+		"prefix": "factory",
+		"body": [
+			"# frozen_string_literal: true",
+			"",
+			"FactoryBot.define do",
+			"  factory :${TM_FILENAME_BASE/^(.*)s$/$1/} do",
+			"    $0",
+			"  end",
+			"end"
+		],
+		"description": "skeleton FactoryBot factory"
+	}
+}

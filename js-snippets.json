@@ -1,0 +1,59 @@
+{
+  "debugger": {
+		"prefix": "db",
+		"body": [
+			"debugger"
+		],
+		"description": "debugger"
+	},
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1:', ${2:${1:loggedValue}})"
+		],
+		"description": "Log output to console"
+	},
+  "arrow function": {
+		"prefix": "func",
+		"body": [
+			"const $1 = () => {",
+			"	$0",
+			"}"
+		],
+		"description": "arrow function"
+	},
+	"disable eslint": {
+		"prefix": "eslint",
+		"body": [
+			"//eslint-disable-line"
+		],
+		"description": "ignore eslint warning for hook dependencies"
+	},
+	"test assertion (it)": {
+		"prefix": "it(",
+		"body": [
+			"it(\"$1\", () => {",
+			"$0",
+			"})"
+		],
+		"description": "jest it assertion"
+	},
+	"test describe": {
+		"prefix": "describe(",
+		"body": [
+			"describe(\"$1\", () => {",
+			"$0",
+			"})"
+		],
+		"description": "jest describe block"
+	},
+	"test before": {
+		"prefix": "before",
+		"body": [
+			"beforeEach(() => {",
+			"$0",
+			"})"
+		],
+		"description": "jest beforeEach block"
+	}
+}

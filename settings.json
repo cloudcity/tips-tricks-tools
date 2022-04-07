@@ -1,0 +1,61 @@
+{
+  // off for accept suggestions on tab
+  "editor.acceptSuggestionOnEnter": "off",
+  // on for accept suggestions on enter
+  // "editor.acceptSuggestionOnEnter": "on",
+
+  // to save files when you focus on anything else
+  "files.autoSave": "onFocusChange",
+
+  // to include your user snippets on top of intellisense suggestions
+  "editor.snippetSuggestions": "top",
+
+  // to configure formatting files on save
+  // change your formatter to suit your preferences
+  "editor.formatOnSave": true,
+  "javascript.validate.enable": true,
+  "ruby.format": "rubocop",
+  // path to rubocop (run `which rubocop`)
+  "ruby.rubocop.executePath": "",
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.tslint": true
+    }
+  },
+  "[ruby]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "misogi.ruby-rubocop"
+  },
+  "[scss]": {
+    "editor.formatOnSave": true
+  },
+  "[css]": {
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // to customize your bracket pair colors (choose colors you like)
+  "editor.bracketPairColorization.enabled": true,
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#1F2020",
+    "editorBracketHighlight.foreground2": "#b2811e",
+    "editorBracketHighlight.foreground3": "#CC727B",
+    "editorBracketHighlight.foreground6": "#136F63",
+    "editorBracketHighlight.foreground5": "#1F2020",
+    "editorBracketHighlight.foreground4": "#b2811e",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#CC727B"
+  }
+}
