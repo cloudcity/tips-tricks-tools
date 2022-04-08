@@ -69,4 +69,4 @@ alias gsqclean='git checkout -q main && git for-each-ref refs/heads/ "--format=%
 
 ## Other
 
--[.pryrc](.pryrc) to get aliases while debugging with `pry`, e.g. `c` instead of `continue`, etc.
+- [.pryrc](.pryrc) to get aliases while debugging with `pry`, e.g. `c` instead of `continue`, etc.
